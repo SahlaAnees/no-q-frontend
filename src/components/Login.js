@@ -1,134 +1,116 @@
-import React from 'react';
-import './Login.css';
-import profile from '../img/login-img.png';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useContext } from 'react';
+import AuthContext from './authContext';
+import "./Login.css";
+import profile from "../img/login-img.png";
+import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 
+import axios from "axios";
+const baseApiUrl = "http://localhost:8080";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const history = useHistory();
+	const history = useHistory();
+  const { setAuthKey } = useContext(AuthContext);
 
-  // function attemptLogin(e) {
-  //   e.preventDefault();
+	const [formData, setFormData] = useState({
+		email: "",
+		password: "",
+	});
 
-  //   console.log('LOgin Attempt');
+	const handleInputChange = (event) => {
+		const { name, value } = event.target;
+		setFormData({ ...formData, [name]: value });
+	};
 
-  //   let authFails = false;
-  //   if (authFails) {
-  //     console.log('back to login');
-  //     // return <Redirect to='/login'  />
-  //     history.push('/login');
-  //   }
-  //   // return <Redirect to='/signup'  />
-  //   history.push('/');
-  // }
+	const handleSubmit = (event) => {
+		event.preventDefault();
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
+		const postData = {
+			email: formData.email,
+			password: formData.password,
+		};
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+		axios
+			.post(`${baseApiUrl}/merchant/login`, postData)
+			.then((response) => {
+				console.log(response.data.data);
+        setAuthKey(response.data.data);
+				history.push("/merchantprofile");
+			})
+			.catch((error) => {
+				console.log(error);
+				history.push("/login");
+			});
+	};
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+	return (
+		<Grid className='Login' container spacing={5}>
+			<Grid item xs={12} sm={6} className='Login-img'>
+				<img src={profile} alt='login-image' />
+			</Grid>
 
-    // For manual testing purposes, hardcode the expected email and password values
-    const expectedEmail = "test@example.com";
-    const expectedPassword = "password123";
+			<Grid item xs={12} sm={6} className='Login-form'>
+				<div className='login-form-box'>
+					<h1>Welcome...!</h1>
 
-    // Check if the email and password are correct
-    if (email === expectedEmail && password === expectedPassword) {
-      // Navigate to the relevant profile page
-      history.push("/merchantprofile");
-    } else {
-      alert("Incorrect email or password. Please try again.");
-    }
-  };
+					<form onSubmit={handleSubmit}>
+						<div className='form-textfill'>
+							<label htmlFor='email'>Email</label>
+							<br />
+							<input
+								type='email'
+								className='form-control'
+								id='email'
+								name='email'
+								// aria-describedby='emailHelp'
+								placeholder='Email'
+								value={formData.email}
+								onChange={handleInputChange}
+							/>
+							<br />
 
- 
+							<label htmlFor='password'>Password</label>
+							<br />
+							<input
+								type='password'
+								className='form-control'
+								id='password'
+								name='password'
+								placeholder='Password'
+								value={formData.password}
+								onChange={handleInputChange}
+								required
+							/>
+						</div>
 
-  return (
+						<Button
+							type='submit'
+							variant='contained'
+							size='medium'
+							className='Login-btn'
+							//onClick={attemptLogin}
+						>
+							Log In
+						</Button>
+					</form>
 
-
-    <Grid className="Login" container spacing={5}>
-     
-        <Grid item xs={12} sm={6} className="Login-img">
-            <img src={profile} alt="login-image" />
-        </Grid>
-
-        <Grid item xs={12} sm={6} className="Login-form">
-            <div className="login-form-box">
-                <h1>Welcome...!</h1>
-                
-                <form onSubmit={handleSubmit}>
-
-                <div className='form-textfill'>
-
-                    {/* <label for="exampleInputEmail1">Email</label> */}
-                    <label htmlFor="email">Email</label><br />
-                    <input
-                    type='email'
-                    // class='form-control'
-                    id='email'
-                    aria-describedby='emailHelp'
-                    placeholder='Enter email'
-                    className='textfield'
-                    value={email}
-                    onChange={handleEmailChange}
-                    /><br />
-
-                 
-                    {/* <label for="exampleInputPassword1">Password</label> */}
-                    <label htmlFor="password">Password</label><br />
-                    <input
-                      type='password'
-                      // class='form-control'
-                      id='password'
-                      placeholder='Password'
-                      className='textfield'
-                      value={password}
-                      onChange={handlePasswordChange}
-                    />
-
-                </div>
-              
-              <Button
-                type='submit'
-                variant="contained" 
-                size="medium" 
-                className='Login-btn'
-                //onClick={attemptLogin}
-              >
-                Log In
-              </Button>
-            </form>
-
-            <div className='newMerchantbox'>
-              <h4 id='newmbr'>
-                {' '}
-                New Merchant ?{' '}
-                
-                <Link to='/signup' id='create-acc'>
-                  {' '}
-                  Create Account
-                </Link>
-
-              </h4>
-            </div>
-        
-            </div>
-        </Grid>
-           
-        </Grid>
- 
-  );
+					<div className='newMerchantbox'>
+						<h4 id='newmbr'>
+							{" "}
+							New Merchant ?{" "}
+							<Link to='/signup' id='create-acc'>
+								{" "}
+								Create Account
+							</Link>
+						</h4>
+					</div>
+				</div>
+			</Grid>
+		</Grid>
+	);
 }
 
 export default Login;

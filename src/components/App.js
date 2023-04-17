@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
 
 import NavBar from './NavBar';
 import Footer from "./Footer"
+import AuthContext from './authContext';
 import Home from './Home';
 import Contact from "./Contact"
 import Login from "./Login"
@@ -29,9 +30,11 @@ import Dashboard from './Dashboard';
 import DemoDash from './DemoDash';
 
 function App() {
-
+  const [authKey, setAuthKey] = useState("");
   return (
+    <AuthContext.Provider value={{ authKey, setAuthKey }}>
     <div className='App'>
+    
       <BrowserRouter>
         <NavBar />
         <Switch>
@@ -119,8 +122,9 @@ function App() {
         </Switch>
         <Footer />
       </BrowserRouter>
-    </div>
-  );
+      </div>
+      </AuthContext.Provider>
+);
 }
 
 export default App;

@@ -44,7 +44,7 @@ function NavBar() {
 						<li>
 							<NavLink
 								exact
-								to='/merchantcategorylist'
+								to='/merchantList'
 								// className={({ isActive }) =>
 								// 	isActive ? "link active" : "link"
 								// }

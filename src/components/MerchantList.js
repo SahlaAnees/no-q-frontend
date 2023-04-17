@@ -12,7 +12,7 @@ const MerchantList = () => {
       }
       })
       .then(response => {
-        setData(response.data);
+        setData(response.data.data);
       })
       .catch(error => {
         console.log(error);
@@ -22,7 +22,7 @@ const MerchantList = () => {
   return (
     <div className='merchantListBox'>
     <h2>Merchant</h2>
-      {data.map(item => (
+      {data.map((item) => (
         <div key={item.ID} className='merchantbox'>
           
           <h3>{item.Name}</h3>
