@@ -6,9 +6,9 @@ import {  NavLink, Link } from 'react-router-dom';
 function NavBar() {
   return (
     <header>
-      <div class='menubar'>
+      <div className='menubar'>
         <Link to='/' style={{ color: '#ea4e3a', textDecoration: 'none' }}>
-          <div class='logo'>
+          <div className='logo'>
             <img src={logo} alt='logo' />
           </div>
         </Link>
