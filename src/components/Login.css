@@ -1,0 +1,107 @@
+body {
+    background: #333;
+}
+
+
+.Login{
+    padding: 100px;
+  }
+
+  .Login-img img{
+    height: 350px;
+    width : 80%;
+    border-radius: 50px;
+  }
+
+  
+
+  .Login-form h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.0rem;
+    color : white;
+    margin-bottom: 20px;
+  }
+
+  .Login-form input{
+    border-radius: 5px;
+    width: 60%;
+    height: 30px;
+    /* margin-top: 5px; */
+    margin-bottom: 10px;
+  }
+
+  .Login-form hr{
+    width: 50%;
+    margin-inline-start: 0;
+  }
+
+
+.textfield {
+
+    margin: 20px 0 !important;
+    /* float: left; */
+    padding: 10px;
+    width: 100%;
+
+}
+
+.Login label{
+    text-align: left;
+    color: #ea4e3a;
+}
+
+.Login-btn{
+  width: 30%;
+  margin: 10px 0 30px 0;
+  padding-top: 20px;
+  color: rgb(2, 91, 192);
+}
+
+
+.newMerchantbox{
+    text-align: left;
+    padding-top: 30px;
+}
+
+#newmbr {
+  color: white;
+  text-align: left;
+}
+
+#create-acc {
+
+  color: #ea4e3a;
+  text-align: left;
+
+}
+
+.dayArea{
+  text-align: center;
+}
+
+.day{
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.day button{
+  padding: 5px 20px;
+  background-color: green;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.tokenArea{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.token button{
+  width: 300px;
+  padding: 5px 30px;
+  margin: 10px 0 0 50px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+

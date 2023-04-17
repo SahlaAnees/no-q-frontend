@@ -1,0 +1,26 @@
+.qContainer{
+    height: 500px;
+}
+
+.queuebox{
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 50px;
+    display: inline-block;
+
+}
+
+.addQueueButton{
+    display: inline-block;
+    height: 50px;
+    width: 120px;
+    margin: 50px;
+}
+
+.addQueueButton button{
+    padding: 5px;
+    background-color: #ea4e3a;
+    font-weight: bolder;
+}

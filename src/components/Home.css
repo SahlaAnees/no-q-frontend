@@ -1,0 +1,39 @@
+.Home{
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 2px;
+}
+
+.Home-new{
+  position: relative;
+  text-align: center;
+}
+
+.Home-new img{
+  width : 100%;
+  height : 550px;
+  filter: brightness(85%);
+}
+
+.Home-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+
+.Home-text h1{
+  font-family: 'Nunito', sans-serif;
+  font-size: 5.0rem;
+  font-weight: bold;
+  color: #272047 ;
+}
+
+.Home-text h2{
+  font-size: 1.8rem;
+  color: #ffff;
+  -webkit-text-stroke: 1px #272047;
+}
+
+
+

@@ -1,0 +1,23 @@
+.Merchant_Categories{
+    padding : 50px 80px 100px 80px;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(59, 59, 59);
+  }
+
+  .Merchant_Categories h3{
+    text-align: center;
+    font-size: 1.7rem;
+    padding-bottom: 30px;
+    /* color : #232dbb; */
+    color: #ea4e3a;
+  }
+
+  .Merchant_Categories img{
+    height: 25%;
+    width: 25%;
+  }
+
+  .Merchant_Categories h4{
+    font-size: large;
+    font-weight: bolder;
+  }

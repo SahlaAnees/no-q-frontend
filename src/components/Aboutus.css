@@ -1,0 +1,64 @@
+.Aboutus{
+    padding: 50px 20px 0 80px;
+    background-color: #081114;
+    padding-bottom: 100px;
+  }
+
+  .Aboutus h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color : #232dbb;
+
+  }
+
+  .Aboutus h4{
+    color: #ea4e3a;
+  }
+
+  .ul_list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .list{
+    background: url("../img/check-green.png") no-repeat left top;
+    background-size: 20px;
+    height: 25px;
+    padding-bottom: 8px;
+    padding-left: 44px;
+  }
+
+  .Merchant{
+    height: 150px;
+  }
+
+  .Merchant-description{
+    font-size: 1.2rem;
+    font-family: 'Kanit', sans-serif;
+    word-spacing: 0.13rem;
+  }
+
+  .Merchant-img img{
+    height : 75%;
+    width : 90%;
+    padding: 30px 30px 20px 0;
+  }
+
+  .User{
+    height: 150px;
+    margin-top: 100px;
+  }
+
+  .User-description{
+    font-size: 1.2rem;
+    font-family: 'Kanit', sans-serif;
+    word-spacing: 0.13rem;
+    padding-left: 300px;
+  }
+
+  .User-img img{
+    height : 60%;
+    width :100%;
+  }

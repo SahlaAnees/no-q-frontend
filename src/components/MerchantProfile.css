@@ -1,0 +1,133 @@
+.header{
+    background-color: #ea4e3a;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.header img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+.header h1{
+    display: inline-block;
+    padding-left:50px ;
+    position: absolute;
+    top: 25px;
+}
+
+
+/* merchant details */
+.details{
+    padding-left: 50px;
+    line-height: 40px;
+    display: inline-block;
+    position: absolute;
+    top : 300px;
+}
+
+.details p{
+    font-size: 20px;
+}
+
+.detail-answer{
+    margin-left: 10px;
+}
+
+.details button{
+    padding: 5px 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    border: solid 2px #ea4e3a;
+}
+
+/* add info modal */
+.modal-content {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    border: solid 2px black;
+    box-shadow: 0 0 20px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    margin-top: 100px;
+  }
+  
+  .modal-header {
+    background-color: #e4e3e3;
+    border-bottom: none;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .modal-body{
+    line-height: 3rem;
+  }
+
+  .bodyLabel{
+    font-weight: bolder;
+    margin-right: 10px;
+  }
+
+  .detail-answer{
+    color: #ea4e3a;
+  }
+  
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+  .modal-footer {
+    border-top: none;
+    margin-top: 10px;
+  }
+
+  .modal-footer Button{
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  .save{
+    background-color: green;
+    color: white;
+  }
+  
+  .close{
+    background-color: rgb(151, 5, 5);
+    color: white;
+  }
+  .modal-backdrop {
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .map{
+    display: inline-block;
+    margin-left: 800px;
+}
+
+  .map img{
+    width: 350px;
+    height: 250px;
+  }
+
+  .scheduleToken{
+    margin: 0 0 50px 50px;
+  }
+
+  .schedule-btn{
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #ea4e3a;
+  }

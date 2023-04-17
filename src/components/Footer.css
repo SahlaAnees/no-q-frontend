@@ -1,0 +1,45 @@
+footer {
+ background-color: hsl(180, 6%, 7%);
+ color: white;
+ padding-top: 10px; 
+}
+
+.footer {
+  text-transform: capitalize;
+  display: flex;
+  width: 90%;
+  margin: 40px auto 0 auto;
+  padding-bottom: 40px;
+  justify-content: space-between;
+}
+
+form input {
+  padding: 5px;
+  border: none;
+}
+
+form button {
+  padding: 5px;
+  background-color: #ea4e3a;
+  border: none;
+  color: white;
+}
+
+.copyright{
+  text-align: center;
+}
+
+.socialmedia ul{
+  list-style-type: none;
+}
+
+.socialmedia li{
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.icon-link{
+  color: #ea4e3a;
+}
