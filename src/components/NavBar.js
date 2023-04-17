@@ -22,9 +22,9 @@ function NavBar() {
 							<NavLink
 								exact
 								to='/'
-								className={({ isActive }) =>
-									isActive ? "link active" : "link"
-								}
+								// className={({ isActive }) =>
+								// 	isActive ? "link active" : "link"
+								// }
 							>
 								Home
 							</NavLink>
@@ -34,9 +34,9 @@ function NavBar() {
 							<NavLink
 								exact
 								to='/aboutus'
-								className={({ isActive }) =>
-									isActive ? "link active" : "link"
-								}
+								// className={({ isActive }) =>
+								// 	isActive ? "link active" : "link"
+								// }
 							>
 								About us
 							</NavLink>
@@ -45,9 +45,9 @@ function NavBar() {
 							<NavLink
 								exact
 								to='/merchantcategorylist'
-								className={({ isActive }) =>
-									isActive ? "link active" : "link"
-								}
+								// className={({ isActive }) =>
+								// 	isActive ? "link active" : "link"
+								// }
 							>
 								Merchants
 							</NavLink>
@@ -56,9 +56,9 @@ function NavBar() {
 							<NavLink
 								exact
 								to='/contact'
-								className={({ isActive }) =>
-									isActive ? "link active" : "link"
-								}
+								// className={({ isActive }) =>
+								// 	isActive ? "link active" : "link"
+								// }
 							>
 								Contact Us
 							</NavLink>
