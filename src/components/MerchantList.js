@@ -6,7 +6,11 @@ const MerchantList = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/merchant/get_all')
+    axios.get('http://localhost:8080/merchant/get_all', {
+      params: {
+        paginator:`{"page":1, "size":10}`
+      }
+      })
       .then(response => {
         setData(response.data);
       })
