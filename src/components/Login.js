@@ -72,10 +72,10 @@ function Login() {
                 <div className='form-textfill'>
 
                     {/* <label for="exampleInputEmail1">Email</label> */}
-                    <label for="email">Email</label><br />
+                    <label htmlFor="email">Email</label><br />
                     <input
                     type='email'
-                    class='form-control'
+                    // class='form-control'
                     id='email'
                     aria-describedby='emailHelp'
                     placeholder='Enter email'
@@ -86,10 +86,10 @@ function Login() {
 
                  
                     {/* <label for="exampleInputPassword1">Password</label> */}
-                    <label for="password">Password</label><br />
+                    <label htmlFor="password">Password</label><br />
                     <input
                       type='password'
-                      class='form-control'
+                      // class='form-control'
                       id='password'
                       placeholder='Password'
                       className='textfield'

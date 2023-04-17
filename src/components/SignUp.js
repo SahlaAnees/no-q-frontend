@@ -228,7 +228,7 @@ function SignUp() {
               id='exampleCheck1'
             />
 
-            <label  for='exampleCheck1' className='terms'>
+            <label  htmlFor='exampleCheck1' className='terms'>
               I agree to{' '}
               <span id='terms'> terms of service and privacy policy </span>{' '}
             </label>
