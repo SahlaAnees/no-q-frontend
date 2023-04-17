@@ -4,14 +4,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Footer from "./Footer"
 import Home from './Home';
-//import Workouts from "./Workouts"
-import Trainers from './Trainers';
 import Contact from "./Contact"
 import Login from "./Login"
-//import Appointment from "./Appointment"
 import SignUp from "./SignUp"
 import Welcome from "./Welcome"
-import AddTrainer from './AddTrainer';
 import MerchantCategoryList from './MerchantCategoryList';
 import Aboutus from './Aboutus';
 import MerchantHealth from './MerchantHealth';
@@ -39,9 +35,6 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Switch>
-          <Route exact path='/addtrainer'>
-            <AddTrainer />
-          </Route>
 
           <Route exact path='/merchantcategorylist'>
             <MerchantCategoryList />
@@ -59,21 +52,9 @@ function App() {
             <SignUp  />
           </Route>
 
-          {/* <Route exact path='/workouts'>
-            <Workouts />
-          </Route> */}
-
           <Route exact path='/aboutus'>
             <Aboutus />
           </Route> 
-
-          <Route exact path='/trainers'>
-            <Trainers />
-          </Route>
-
-          {/* <Route exact path='/workouts'>
-            <Workouts />
-          </Route> */}
 
           <Route exact path='/contact'>
             <Contact />

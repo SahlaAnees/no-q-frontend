@@ -72,53 +72,6 @@ function Dashboard() {
 		setEndTime(eDate);
 	}
 
-	// function handleStartTime(event) {
-	//     const sTime = event.target.value; // Retrieve the input date as a string
-	//     const sDate = new Date(sTime); // Create a Date object from the input string
-	//     console.log(sDate);
-	//     // const sDateString = sDate.toISOString(); // Format the Date object as an ISO string
-	//     // console.log(sDateString); // Output the formatted string to the console
-
-	//     setStartTime(sTime);
-
-	//     const hours = sTime.getUTCHours(); // Get the hours component of the time in UTC
-	//     const minutes = sTime.getUTCMinutes(); // Get the minutes component of the time in UTC
-
-	//     const startTotalMinutes = hours * 60 + minutes; // Convert the time to minutes
-	//     console.log(startTotalMinutes); // Output the time in minutes to the console
-	//   }
-
-	//   function handleEndTime(event) {
-	//     const eTime = event.target.value; // Retrieve the input date as a string
-	//     const eDate = new Date(eTime); // Create a Date object from the input string
-	//     // const eDateString = eDate.toISOString(); // Format the Date object as an ISO string
-	//     // console.log(eDateString); // Output the formatted string to the console
-
-	//     setEndTime(eTime);
-
-	//     const hours = eTime.getUTCHours(); // Get the hours component of the time in UTC
-	//     const minutes = eTime.getUTCMinutes(); // Get the minutes component of the time in UTC
-
-	//     const endTotalMinutes = hours * 60 + minutes; // Convert the time to minutes
-	//     console.log(endTotalMinutes); // Output the time in minutes to the console
-	//   }
-
-	//   const tokenList = () => {
-
-	//     const queueInterval = endTotalMinutes - startTotalMinutes;
-	//     const numberOfTokens = queueInterval / interval;
-	//     console.log(numberOfTokens);
-
-	//     const endTime = new Date(startTime.getTime() + interval);
-	//     const day = sTime.getUTCDate();
-
-	//     for(let i=0; i<numberOfTokens ; i++){
-	//         <div className='tokenBox'>
-	//             <Button onClick={seeWhoResereved}>${startTime} - ${endTime}</Button>
-	//             startTime[i] = endTime[i-1];
-	//         </div>
-	//     }
-	//   };
 
 	const tokenList = () => {
 		const sDate = new Date(startTime);
