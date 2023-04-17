@@ -1,16 +1,29 @@
-footer {
- background-color: hsl(180, 6%, 7%);
- color: white;
- padding-top: 10px; 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the content takes up at least the height of the viewport */
 }
+
+main {
+  flex: 1; /* Allow the main content to take up the remaining space */
+}
+
+
 
 .footer {
   text-transform: capitalize;
   display: flex;
-  width: 90%;
+  /* width: 90%;
   margin: 40px auto 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 40px; */
   justify-content: space-between;
+  background-color: hsl(180, 6%, 7%);
+  color: white;
+  padding: 20px 50px 20px 50px;
+  height: 150px;
+  /* position: absolute;
+   bottom: 0; */
+  /* background-color:hsl(180, 6%, 7%) ; */
 }
 
 form input {
@@ -27,6 +40,12 @@ form button {
 
 .copyright{
   text-align: center;
+  margin-right: 50%;
+  margin-top: 25px;
+}
+
+.socialmedia{
+  margin-top: 25px;
 }
 
 .socialmedia ul{
@@ -42,4 +61,10 @@ form button {
 
 .icon-link{
   color: #ea4e3a;
+}
+
+.newsbox{
+  position: absolute;
+  right: 50px;
+  /* padding-bottom: 25px; */
 }

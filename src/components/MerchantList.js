@@ -21,7 +21,7 @@ const MerchantList = () => {
 
   return (
     <div className='merchantListBox'>
-    <h2>Merchant</h2>
+    <h2>Merchants</h2>
       {data.map((item) => (
         <div key={item.ID} className='merchantbox'>
           

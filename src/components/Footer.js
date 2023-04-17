@@ -32,7 +32,7 @@ function Footer() {
           <FooterCopyright />
         </div>
 
-        <div className='box'>
+        <div className='newsbox'>
           <h3>newsletter</h3>
           <p>subscribe for latest updates</p>
           <form action=''>
