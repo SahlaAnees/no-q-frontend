@@ -11,24 +11,44 @@ const baseApiUrl = "http://localhost:8080";
 function MerchantProfile(props) {
     const { authKey } = useContext(AuthContext);
     const [data, setData] = useState(null);
+    const [queues, setQueue] = useState([]);
 
     useEffect(() => {
-
         const config = {
             headers: {
                 Authorization: 'Bearer ' + authKey
             }
           };
+
+        var Id 
         
         axios.get(`${baseApiUrl}/merchant/get_single`, config)
         .then((response) => {
-            console.log(response.data.data);
+            Id = response.data.data
             setData(response.data.data);
         })
         .catch((error) => {
             console.log(error);
         });
+
+        console.log(data)
+        axios.get(`${baseApiUrl}/queue/get_by_merchant/1`, config)
+        .then((response) => {
+            console.log(response.data.data);
+            setQueue(response.data.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
     }, [authKey]);
+
+    const [selectedQueue, setSelectedQueue] = useState(null);
+
+    const handleQueueSelect = (queue) => {
+      setSelectedQueue(queue);
+    };
+
+    
 
   if (!data) {
     return <div>Loading...</div>;
@@ -65,6 +85,22 @@ function MerchantProfile(props) {
                 </Button>
             </Link>
           </div>
+          <div>
+            <h1>Queue List</h1>
+            <ul>
+              {queues.map((queue) => (
+                <li key={queue.ID} onClick={() => handleQueueSelect(queue)}>
+                  {queue.Name}
+                </li>
+              ))}
+            </ul>
+            {selectedQueue && (
+              <div>
+                <h2>{selectedQueue.Name}</h2>
+                <p>{selectedQueue.Interval}</p>
+              </div>
+            )}
+        </div>
     </div>
   );
 }
