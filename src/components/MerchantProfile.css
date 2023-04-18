@@ -121,23 +121,78 @@ input[type=number]::-webkit-inner-spin-button {
     height: 250px;
   }
 
-  .scheduleToken{
+  .createQ-btn-div{
     margin: 0 0 50px 50px;
   }
 
-  .schedule-btn{
+  .create-q-btn{
+    display: inline-block;
+    background-color: #ea4e3a;
+    width: 200px;
+    height: 55px;
     padding: 10px 30px;
     font-size: 20px;
     border-radius: 5px;
-    background-color: #ea4e3a;
   }
 
+
   /* Queue area */
+
+  .headingQueueList{
+    text-align: center;
+    margin: 20px 0;
+  }
 
   .queueNameBox{
     display: inline-block;
     border: solid 2px black;
     background-color: white;
     color : black;
-    margin : 5px 20px;
+    font-size: 25px;
+    margin : 5px 50px;
+    text-align: center;
+    width: 150px;
+    padding: 10px 5px;
+  }
+
+  .queueNameBoxUL{
+    display: inline-block;
+  }
+
+
+  .popup-form{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: solid 2px black;
+    background-color: gray;
+    width: 25%;
+    margin-left: 500px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .popup-form input{
+    width: 200px;
+  }
+
+  .createQueueForm{
+    padding: 50px 0;
+  }
+
+  .form-create-q-btn{
+    display: inline-block;
+  }
+
+  
+
+  .form-close-btn{
+    height: 50px;
+    color: #e4e3e3;
+  }
+
+  .form-close-btn button{
+    position: absolute;
+    bottom: 0;
+    
   }
