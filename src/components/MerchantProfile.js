@@ -81,7 +81,7 @@ function MerchantProfile(props) {
 
 		const postData = {
 			name: queueData.name,
-			interval: 30,
+			interval: 60,
 			start_time: date.toISOString(queueData.start_time),
 			end_time: date.toISOString(queueData.end_time),
 		};
@@ -103,6 +103,55 @@ function MerchantProfile(props) {
 			});
 	};
 
+
+  //For get slots
+  const showSlots = (date) => {
+    
+      const config = {
+        headers: {
+          Authorization: "Bearer " + authKey,
+        },
+      };
+  
+      var Id;
+  
+      axios
+        .get(`${baseApiUrl}/queue/get_slots_by_date/2/${date}`, config)
+        .then((response) => {
+          setData(response.data.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  
+    const slots = [
+    {
+      isReserved: false,
+      startTime: '8:00',
+      endTime: "9:00"
+    },
+    {
+      isReserved: false,
+      startTime: '9:00',
+      endTime: "10:00"
+    },
+    {
+      isReserved: false,
+      startTime: '10:00',
+      endTime: "11:00"
+    },
+    {
+      isReserved: true,
+      startTime: '11:00',
+      endTime: "12:00"
+    },
+    {
+      isReserved: false,
+      startTime: '12:00',
+      endTime: "13:00"
+    }
+  ]
 
 	return (
 		<div className='profile'>
@@ -143,6 +192,8 @@ function MerchantProfile(props) {
 			</div>
 			<div>
 				<h1 className='headingQueueList'>Queue List</h1>
+
+        <div className="queueBoxArea">
 				<ul className="queueNameBoxUL">
 					{queues.map((queue) => (
 						<li
@@ -154,7 +205,7 @@ function MerchantProfile(props) {
 						</li>
 					))}
 				</ul>
-
+      </div>
 
 				{showForm && (
 					<div className='popup-form'>
@@ -221,7 +272,6 @@ function MerchantProfile(props) {
 							{/* {errors.password && <span>{errors.password}</span>} */}
 
 							<Button
-								type='submit'
 								className='form-create-q-btn'
 								variant='contained'
 								color='success'
@@ -236,14 +286,88 @@ function MerchantProfile(props) {
 						</button>
 					</div>
 				)}
-
-				{selectedQueue && (
-					<div>
-						<h2>{selectedQueue.Name}</h2>
-						<p>{selectedQueue.Interval}</p>
-					</div>
-				)}
 			</div>
+
+      <div className="daysArea">
+              <Button
+								className='day-btn'
+								variant='contained'
+								color='success'
+								size='large'
+                onClick={() => showSlots('2023-04-18T02:29:38.365Z')}
+							>
+								Today 
+							</Button>
+
+              <Button
+								className='day-btn'
+								variant='contained'
+								color='success'
+								size='large'
+                onClick={() => showSlots('2023-04-19T02:29:38.365Z')}
+							>
+								Tomorrow 
+							</Button>
+
+              <Button
+								className='day-btn'
+								variant='contained'
+								color='success'
+								size='large'
+                onClick={() => showSlots('2023-04-20T02:29:38.365Z')}
+							>
+								Thursday 
+							</Button>
+
+              <Button
+								className='day-btn'
+								variant='contained'
+								color='success'
+								size='large'
+                onClick={() => showSlots('2023-04-21T02:29:38.365Z')}
+							>
+								Friday 
+							</Button>
+
+              <Button
+								className='day-btn'
+								variant='contained'
+								color='success'
+								size='large'
+                onClick={() => showSlots('2023-04-22T02:29:38.365Z')}
+							>
+								Saturday 
+							</Button>
+
+              <Button
+								className='day-btn'
+								variant='contained'
+								color='success'
+								size='large'
+                onClick={() => showSlots('2023-04-23T02:29:38.365Z')}
+							>
+								Sunday 
+							</Button>
+
+              <Button
+								className='day-btn'
+								variant='contained'
+								color='success'
+								size='large'
+                onClick={() => showSlots('2023-04-24T02:29:38.365Z')}
+							>
+								Monday 
+							</Button>
+      </div> 
+
+      <div className="slotsArea">
+          {slots.map(slot => {
+            return (<div style={{ backgroundColor: slot.isReserved ? 'red' : 'green', color: 'whitesmoke', width: '400px', height: '30px', padding: '20px', margin: '5px', textAlign: "center" , borderRadius: "5px", marginBottom:"30px" }}>
+              <p>{slot.startTime} - {slot.endTime}</p>
+            </div>)
+          })}
+      </div>
+
 		</div>
 	);
 }

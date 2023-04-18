@@ -2,7 +2,8 @@ import React from 'react';
 import "./Aboutus.css";
 import Grid from '@mui/material/Grid';
 
-import gray from "../img/gray.jpg";
+import about1 from "../img/cover2.jpg";
+import about2 from "../img/home_about.jpg";
 
 function Aboutus(){
 
@@ -23,13 +24,13 @@ function Aboutus(){
                 </Grid>
 
                 <Grid item xs={12} sm={4} className="Merchant-img">
-                    <img src={gray} alt="Merchant-image" />
+                    <img src={about2} alt="Merchant-image" />
                 </Grid>
             </Grid>
 
             <Grid className="User" container spacing={0}>
                 <Grid item xs={12} sm={4} className="User-img">
-                     <img src={gray} alt="User-image" />
+                     <img src={about1} alt="User-image" />
                 </Grid>
 
                 <Grid item xs={12} sm={8} className="User-description">
