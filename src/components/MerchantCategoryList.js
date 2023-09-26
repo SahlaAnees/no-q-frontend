@@ -78,15 +78,6 @@ function MerchantCategoryList() {
 
             <Grid item xs={4} spacing={5}>
               <Item>
-                <img src={animal} alt="animal care" />
-                <Link exact to='/animal' className={({ isActive }) => isActive ? 'link active' : 'link'}> 
-                <h4>Animal Care</h4>
-                </Link>
-              </Item>
-            </Grid>
-
-            <Grid item xs={4} spacing={5}>
-              <Item>
                 <img src={theater} alt="theater" />
                 <Link exact to='/theater' className={({ isActive }) => isActive ? 'link active' : 'link'}> 
                 <h4>Theater</h4>

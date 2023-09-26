@@ -32,23 +32,6 @@ function Footer() {
           <FooterCopyright />
         </div>
 
-        <div className='contactBox'>
-          <h3>contact us</h3>
-          <p>subscribe for latest updates</p>
-          <form action=''>
-            <input
-              type='email'
-              name=''
-              className='email'
-              placeholder='Enter your email'
-              id=''
-            />
-            <button type='submit' value='subscribe' className='btn'>
-              Subscribe
-            </button>
-          </form>
-        </div>
-
         <div className='newsbox'>
           <h3>newsletter</h3>
           <p>subscribe for latest updates</p>

@@ -12,6 +12,7 @@
   width : 100%;
   height : 550px;
   filter: brightness(85%);
+  margin-bottom: 50px;
 }
 
 .Home-text{
@@ -32,22 +33,24 @@
 .Home-text h2{
   font-size: 1.8rem;
   color: #ffff;
-  -webkit-text-stroke: 1px #272047;
+  -webkit-text-stroke: 1.5px #272047;
+  margin-bottom: 25px;
 }
 
 .getTokenBtn{
-  background-color: red;
-  padding: 10px;
- width: 400px;
- height: 100px;
- font-size: 30px;
+  background-color:black;
+  margin: 10px;
+  width: 400px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.getTokenBtn button{
-  background-color: red;
-  color: black;
- 
-  
+.getTokenBtn:hover {
+  filter:opacity(80%);
+  cursor: pointer;
 }
 
 

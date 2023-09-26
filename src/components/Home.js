@@ -24,7 +24,7 @@ function Home() {
 
           <Link to='/merchantList'>
             {/* <Button className="getTokenBtn" variant="contained" color="error" size="large" >Take a Token</Button> */}
-            <button className="getTokenBtn" variant="contained" color="error" size="large" >Take a Token</button>
+            <button className="getTokenBtn" variant="contained" size="large" >Take a Token</button>
           </Link>
         </div>
       </div>

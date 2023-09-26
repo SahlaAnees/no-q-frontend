@@ -3,7 +3,7 @@ import "./Aboutus.css";
 import Grid from '@mui/material/Grid';
 
 import about1 from "../img/cover2.jpg";
-import about2 from "../img/home_about.jpg";
+import about2 from "../img/q.jpg";
 
 function Aboutus(){
 

@@ -1,7 +1,7 @@
 .menubar {
   display: flex;
-  background-color: #111313;
-  color: white;
+  background-color: #ffff;
+  color: black;
   justify-content: space-evenly;
   width: 100%;
 }
@@ -38,7 +38,7 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 700;
   font-size: 20px;
 }
@@ -55,7 +55,7 @@ nav ul li a:active {
   color: white;
   background-color: #ea4e3a;
   border: none;
-  padding: 12px 12px;
+  padding: 10px 10px;
   margin: auto 40px auto 0; 
   font-weight: 700;
   font-size: 20px;
@@ -65,7 +65,7 @@ nav ul li a:active {
 }
 
 #menu-login-button:hover {
-  filter: brightness(90%);
+  filter: brightness(80%);
   cursor: pointer;
 }
 
