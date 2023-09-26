@@ -17,7 +17,7 @@ function MerchantProfile(props) {
 
   const [queueData, setQueueData] = useState({
 		name: "",
-		interval: 0,
+		interval: 60,
 		start_time: "",
 		end_time: "",
 	});
@@ -116,7 +116,7 @@ function MerchantProfile(props) {
       var Id;
   
       axios
-        .get(`${baseApiUrl}/queue/get_slots_by_date/2/${date}`, config)
+        .get(`${baseApiUrl}/queue/get_slots_by_date/1/${date}`, config)
         .then((response) => {
           setData(response.data.data);
         })

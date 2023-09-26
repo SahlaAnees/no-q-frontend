@@ -68,3 +68,8 @@ form button {
   right: 50px;
   /* padding-bottom: 25px; */
 }
+
+.contactBox{
+  position: absolute;
+  right: 250px;
+}

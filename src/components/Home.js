@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import Button from '@mui/material/Button';
 
 import MerchantCategoryList from './MerchantCategoryList';
+//import MerchantList from './MerchantList';
 import Aboutus from './Aboutus';
 
 
@@ -21,8 +22,9 @@ function Home() {
           <h1>Modern Solution For Lengthy Queues.</h1>
           <h2>Pick a token from any of your desired merchants from anywhere.</h2>
 
-          <Link to='/merchantcategorylist'>
-            <Button variant="contained" color="success" size="large" >Take a Token</Button>
+          <Link to='/merchantList'>
+            {/* <Button className="getTokenBtn" variant="contained" color="error" size="large" >Take a Token</Button> */}
+            <button className="getTokenBtn" variant="contained" color="error" size="large" >Take a Token</button>
           </Link>
         </div>
       </div>

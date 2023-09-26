@@ -32,7 +32,7 @@ function UserviewOfMerchant() {
                 <img src={map} alt="map" />
           </div>
 
-          <div className='scheduleToken'>
+          {/* <div className='scheduleToken'>
             <Link exact to='/merchantscheduletoken'>
             <Button
                 type='submit'
@@ -43,7 +43,7 @@ function UserviewOfMerchant() {
                 Schedule Token
                 </Button>
             </Link>
-          </div>
+          </div> */}
     </div>
 	);
 }
