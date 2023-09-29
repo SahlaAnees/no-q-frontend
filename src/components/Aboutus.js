@@ -2,8 +2,8 @@ import React from 'react';
 import "./Aboutus.css";
 import Grid from '@mui/material/Grid';
 
-import about1 from "../img/cover2.jpg";
-import about2 from "../img/q.jpg";
+import about1 from "../img/aboutus1.jpg";
+import about2 from "../img/aboutus2.jpg";
 
 function Aboutus(){
 

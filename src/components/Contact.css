@@ -3,9 +3,10 @@
     justify-content: space-around;
     flex-direction: row;
     margin: 10px;
-    width: 80%;
+    width: 50%;
+    height: 90%;
     margin: auto;
-    padding: 100px 0 50px 0;
+    padding: 80px 0 50px 0;
 }
 .topsection h2{
     text-align: center;

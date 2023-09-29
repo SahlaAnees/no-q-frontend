@@ -1,14 +1,13 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the content takes up at least the height of the viewport */
+  min-height: 100vh; 
+  /* Ensure the content takes up at least the height of the viewport */
 }
 
 main {
   flex: 1; /* Allow the main content to take up the remaining space */
 }
-
-
 
 .footer {
   text-transform: capitalize;

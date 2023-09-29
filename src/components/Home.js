@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import bannerimg from '../img/cover1.jpg';
+import bannerimg from '../img/landingpage.jpg';
 import { Link } from "react-router-dom"
 import Button from '@mui/material/Button';
 

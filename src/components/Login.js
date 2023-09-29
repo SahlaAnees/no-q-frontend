@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import AuthContext from './authContext';
 import "./Login.css";
-import profile from "../img/login-img.png";
+import profile from "../img/login-geo2.png";
 import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 
@@ -13,7 +13,7 @@ const baseApiUrl = "http://localhost:8080";
 
 function Login() {
 	const history = useHistory();
-  const { setAuthKey } = useContext(AuthContext);
+ 	const { setAuthKey } = useContext(AuthContext);
 
 	const [formData, setFormData] = useState({
 		email: "",
@@ -48,11 +48,11 @@ function Login() {
 
 	return (
 		<Grid className='Login' container spacing={5}>
-			<Grid item xs={12} sm={6} className='Login-img'>
+			<Grid item xs={6} className='Login-img'>
 				<img src={profile} alt='login-image' />
 			</Grid>
 
-			<Grid item xs={12} sm={6} className='Login-form'>
+			<Grid item xs={6} className='Login-form'>
 				<div className='login-form-box'>
 					<h1>Welcome...!</h1>
 

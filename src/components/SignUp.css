@@ -6,7 +6,7 @@ body {
     margin: 50px 500px 50px 500px;
     border : 1px solid #D6D2C4;
     padding: 30px;
-    background-color: rgb(215, 216, 216);
+    border-radius: 20px;
   }
 
   .createAccountForm label{
@@ -21,6 +21,11 @@ body {
     margin-top: 5px;
     margin-bottom: 20px;
     border: 1px solid black;
+    
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;  
   }
 
   .createAccountForm select{
